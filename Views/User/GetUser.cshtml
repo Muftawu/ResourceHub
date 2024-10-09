@@ -1,0 +1,15 @@
+@model group4.Models.User;
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Profile for @ViewBag.FirstName @ViewBag.LastName</h2>
+    
+    <p>FirstName: @ViewBag.FirstName</p>
+    <p>LastName: @ViewBag.LastName</p>
+    <p>Email: @ViewBag.Email</p>
+    <p>Phone: @ViewBag.Phone</p>
+
+</div>

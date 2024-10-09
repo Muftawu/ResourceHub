@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "My Uploads";
+}
+
+<div class="text-center">
+    <h3 class="mb-3">My Uploads</h3>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @for (int i = 0; i < 5; i++)
+    {
+        <div class="card-group">
+            <div class="card border-info" style="width: 5rem;">
+                <img src="/wwwroot/images/pdf-file.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Resource Name</h5>
+                    
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div>
+            </div>
+
+        </div>
+
+    }
+
+    </div>
+
+</div>
