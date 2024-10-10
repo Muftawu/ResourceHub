@@ -1,3 +1,5 @@
+@model Resource;
+
 @{
     ViewData["Title"] = "Upload Resource";
 }
@@ -12,35 +14,51 @@
     <h4>Resource Upload Page</h4>
     <hr style="width: 50%; margin-left: 25%;">
 
-    <form action="">
+    <form asp-action="Upload" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
 
         <div class="mx-auto" style="width: 50%;">
 
             <div class="input-group mb-3" style="padding-bottom: 25px;">
                 <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default">
+                    aria-describedby="inputGroup-sizing-default" name="Name" required>
             </div>
 
-            <div class="input-group mb-3" style="padding-bottom: 25px;">
-                <span class="input-group-text" id="inputGroup-sizing-default">Topic</span>
-                <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default">
+            <div style="padding-bottom: 25px;">
+                <select class="form-select" aria-label="Select a topic" name="TopicId" required>
+                    <option value="" disabled selected>Open this select a topic</option>
+                    @foreach (var topic in ViewBag.topics)
+                    {
+                        <option value="@topic.Id">@topic.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div style="padding-bottom: 25px;">
+                <select class="form-select" aria-label="Select a course" name="CourseId" required>
+                    <option value="" disabled selected>Open this select a course</option>
+                    @foreach (var course in ViewBag.courses)
+                    {
+                        <option value="@course.Id">@course.Name</option>
+                    }
+                </select>
             </div>
 
             <div class="mb-3" style="padding-bottom: 25px;">
-                <input class="form-control" type="file" id="formFileMultiple" multiple>
+                <input class="form-control" type="file" id="formFile" name="file" required>
             </div>
 
             <div class="input-group mb-3" style="padding-bottom: 25px;">
-                <span class="input-group-text" id="inputGroup-sizing-default">Comment</span>
+                <span class="input-group-text" id="inputGroup-sizing-default">Comments</span>
                 <input type="text" class="form-control" aria-label="Sizing example input"
-                    aria-describedby="inputGroup-sizing-default">
+                    aria-describedby="inputGroup-sizing-default" name="Comments" required>
             </div>
 
-            <button type="button" class="btn btn-success btn-md" style="width: 70%;">Submit</button>
+            <button type="submit" class="btn btn-success btn-md" style="width: 70%;">Submit</button>
 
         </div>
 
     </form>
 </div>
+

@@ -1,19 +1,17 @@
-using System;
-using System.Collections.Generic;
 
 namespace group4.Models;
 
-public partial class User
+public class User
 {
     public int UserId { get; set; }
 
-    public string FirstName { get; set; } = null!;
+    public required string FirstName { get; set; }
 
-    public string LastName { get; set; } = null!;
+    public required string LastName { get; set; }
 
-    public string Email { get; set; } = null!;
+    public required string Email { get; set; }
 
-    public string Phone { get; set; } = null!;
+    public required string Phone { get; set; }
 
-    public virtual ICollection<Resource> Resources { get; set; } = new List<Resource>();
+    public required string Password { get; set; }
 }

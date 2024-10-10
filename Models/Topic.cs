@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace group4.Models;
 
-public class Course
+public class Topic
 {
     public int Id { get; set; }
 
     public required string Name { get; set; }
 
-    public int DepartmentId { get; set; }
+    public int CourseId { get; set; }
 
-    public Department? Department { get; set; }
+    public Course? Course { get; set; }
 
 }

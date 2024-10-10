@@ -45,7 +45,8 @@ public class UserController : Controller
             FirstName = "Muftawu",
             LastName = "Yiwere",
             Email = "mohammedyiwere@gmail.com",
-            Phone = "+233545723325"
+            Phone = "+233545723325",
+            Password = "Muftawu@2024"
         };
 
         _context.Users.Add(newuser);

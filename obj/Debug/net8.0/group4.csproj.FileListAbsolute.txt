@@ -166,3 +166,4 @@
 /home/muftawu/iteratives/group4/obj/Debug/net8.0/group4.pdb
 /home/muftawu/iteratives/group4/obj/Debug/net8.0/group4.genruntimeconfig.cache
 /home/muftawu/iteratives/group4/obj/Debug/net8.0/ref/group4.dll
+/home/muftawu/iteratives/group4/obj/Debug/net8.0/group4.sourcelink.json

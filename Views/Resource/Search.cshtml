@@ -1,11 +1,11 @@
 @model List<Resource>;
 
 @{
-    ViewData["Title"] = "My Uploads";
+    ViewData["Title"] = "Search Results";
 }
 
 <div class="text-center">
-    <h3 class="mb-3">My Uploads</h3>
+    <h3 class="mb-3">Search Results for ""</h3>
         <hr style="width: 50%; margin-left: 25%;">
 
     <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -16,7 +16,6 @@
                 <img src="~/images/pdf-file.png" class="card-img-top" alt="..." style="padding-top: 5px;">
                 <div class="card-body">
                     <h5 class="card-title">@resource.Name</h5>
-                    @* <h5 class="card-title">@resource.FilePath</h5> *@
                 </div>
                 <div class="card-footer">
                         <small class="text-body-secondary">@resource.Comments</small>

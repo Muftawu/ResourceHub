@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kEZB7+fJPyRZU6CgcvQE6QTapDAXmHP1y4Un0ZmBUEU=",
+  "Hash": "OWWniYhVbt5bDvL3RzhW7jzPRL1aXoW98cP5HGKwGF8=",
   "Source": "group4",
   "BasePath": "_content/group4",
   "Mode": "Default",
@@ -112,12 +112,12 @@
       "OriginalItemSpec": "wwwroot/images/pdf-file.png"
     },
     {
-      "Identity": "/home/muftawu/iteratives/group4/wwwroot/images/photo-gallery.png",
+      "Identity": "/home/muftawu/iteratives/group4/wwwroot/images/pic.png",
       "SourceId": "group4",
       "SourceType": "Discovered",
       "ContentRoot": "/home/muftawu/iteratives/group4/wwwroot/",
       "BasePath": "_content/group4",
-      "RelativePath": "images/photo-gallery.png",
+      "RelativePath": "images/pic.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,7 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/photo-gallery.png"
+      "OriginalItemSpec": "wwwroot/images/pic.png"
     },
     {
       "Identity": "/home/muftawu/iteratives/group4/wwwroot/js/site.js",

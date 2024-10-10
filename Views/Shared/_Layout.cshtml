@@ -18,33 +18,31 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Home" asp-action="Index" aria-current="page">Home</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link active" asp-controller="Resource" asp-action="MyUploads">My Uploads</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Resource" asp-action="Upload">🖊️Upload Resource</a>
+                            <a class="nav-link active" asp-controller="Resource" asp-action="Upload">🖊️Upload
+                                Resource</a>
                         </li>
                     </ul>
                 </div>
 
                 <form class="d-flex" role="search" style="padding-right: 30%;">
                     <input class="form-control me-2" type="search" placeholder="Search resource..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>  
+                    <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
 
                 <nav class="navbar bg-body-tertiary">
                     <button class="btn-outline-success btn-sm">
-                        <a class="nav-link dropdown-toggle" style="font-size:small;" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        👋Hello, John
-                    </a>
-                    
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">View Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
-                    </ul>
+                        <a class="nav-link dropdown-toggle" style="font-size:small;" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            👋Hello, John
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
                     </button>
                 </nav>
             </div>
@@ -52,6 +50,42 @@
         </nav>
     </header>
     <div class="container">
+
+        <!-- User Profile -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">My Profile</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Hello, John</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="alert alert-danger">
+                    @TempData["ErrorMessage"]
+                </div>
+            }
+        </div>
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

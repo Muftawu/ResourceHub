@@ -3,23 +3,26 @@ using System.Collections.Generic;
 
 namespace group4.Models;
 
-public partial class Resource
+public class Resource
 {
-    public string ResourceId { get; set; } = null!;
+    public int Id { get; set; }
+
+    public required string Name { get; set; } 
+
+    public string? Comments { get; set; } 
+
+    public string? FilePath { get; set; }
 
     public int UserId { get; set; }
 
     public int CourseId { get; set; }
 
-    public string Topic { get; set; } = null!;
+    public int TopicId { get; set; }
 
-    public string Name { get; set; } = null!;
+    public User? User { get; set; }
 
-    public byte[] Resource1 { get; set; } = null!;
+    public Course? Course { get; set; }
 
-    public string? Comment { get; set; }
+    public Topic? Topic { get; set; }
 
-    public virtual Course Course { get; set; } = null!;
-
-    public virtual User User { get; set; } = null!;
 }

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace group4.Models;
 
-public partial class Department
+public class Department
 {
-    public int DepartmentId { get; set; }
+    public int Id { get; set; }
 
-    public string DepName { get; set; } = null!;
+    public string Name { get; set; } = null!;
 
-    public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
 }
