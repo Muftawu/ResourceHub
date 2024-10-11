@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using group4.Data;
 using group4.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace group4.Controllers;
 
@@ -15,6 +16,7 @@ public class ResourceController : Controller
         _context = context;
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> MyUploads()
     {
@@ -22,6 +24,7 @@ public class ResourceController : Controller
         return View(resources);
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Upload()
     {   
@@ -33,11 +36,12 @@ public class ResourceController : Controller
         return View();
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<IActionResult> Upload(Resource resource, IFormFile file)
     {
         var userId = 1;
-        resource.UserId = userId;
+        resource.UserId = userId.ToString();
 
         if (ModelState.IsValid)
         {
@@ -84,6 +88,7 @@ public class ResourceController : Controller
         return View(resource);
     }
 
+    [Authorize]
     public async Task<IActionResult> Search(String searchItem)
     {
         List<Resource> resources = await _context.Resources.ToListAsync();

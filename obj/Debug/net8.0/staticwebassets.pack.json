@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/images/icons8-mind-map-48.png",
+      "PackagePath": "staticwebassets/images/icons8-mind-map-48.png"
+    },
+    {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/images/mind-map.gif",
+      "PackagePath": "staticwebassets/images/mind-map.gif"
+    },
+    {
       "Id": "/home/muftawu/iteratives/group4/wwwroot/images/pdf-file.png",
       "PackagePath": "staticwebassets/images/pdf-file.png"
     },

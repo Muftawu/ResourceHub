@@ -167,3 +167,16 @@
 /home/muftawu/iteratives/group4/obj/Debug/net8.0/group4.genruntimeconfig.cache
 /home/muftawu/iteratives/group4/obj/Debug/net8.0/ref/group4.dll
 /home/muftawu/iteratives/group4/obj/Debug/net8.0/group4.sourcelink.json
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/Microsoft.Extensions.Identity.Core.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/Microsoft.Extensions.Identity.Stores.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/System.Drawing.Common.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/System.Security.Permissions.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/System.Windows.Extensions.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/home/muftawu/iteratives/group4/bin/Debug/net8.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
