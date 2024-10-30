@@ -1,8 +1,87 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Welcome to the Student Resource Hub";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Resource Hub</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">Resource Hub</a>.</p>
+<div class="container text-center mt-5">
+    <!-- Welcome Section -->
+    <div class="jumbotron bg-light p-5 rounded">
+        <h1 class="display-4">Welcome to the Student Resource Hub</h1>
+        <p class="lead">Your one-stop platform for sharing, discovering, and discussing academic resources.</p>
+        <hr class="my-4">
+        <p>Join a thriving community of students who collaborate and share educational materials across various subjects and levels.</p>
+        <a asp-controller="User" asp-action="SignUp" class="btn btn-primary btn-lg mt-3" role="button">Get Started</a>
+    </div>
+
+    <!-- Problem Statement Section -->
+    <section class="my-5">
+        <h2>Why We Built the Resource Hub</h2>
+        <p class="text-muted">
+            Students often face challenges in accessing quality resources and materials that support their academic growth. Existing platforms are fragmented and unreliable, making it difficult to find the right tools, study guides, and peer support when needed.
+        </p>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Fragmented Platforms</h5>
+                        <p class="card-text">Current platforms are spread out and hard to navigate, making it tough to find reliable resources in one place.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Difficulty Finding Resources</h5>
+                        <p class="card-text">Students struggle with finding study materials efficiently, especially when it comes to collaborative learning.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Lack of Peer Support</h5>
+                        <p class="card-text">Collaborative learning is limited, making it difficult for students to support each other in their academic journeys.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="my-5">
+        <h2>Why Choose Resource Hub</h2>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🔍 Efficient Search</h5>
+                        <p class="card-text">Quickly find the resources you need using powerful search tools.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📝 Collaborative Learning</h5>
+                        <p class="card-text">Encourage peer-to-peer support and discussions for enhanced learning experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🔧 Resource Management</h5>
+                        <p class="card-text">Organize your own study materials and contribute to the academic success of others.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">⭐ Community-Driven</h5>
+                        <p class="card-text">Rate and comment on resources to help guide others toward the best materials.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

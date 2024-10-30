@@ -10,12 +10,14 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<User, IdentityRole>(
+    options => options.User.RequireUniqueEmail = true
+).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
     options => {
-        options.LoginPath = "User/Login";
-        options.LogoutPath = "User/Logout";
+        options.LoginPath = "/User/Login";
+        options.LogoutPath = "/User/Logout";
     });
 
 var app = builder.Build();

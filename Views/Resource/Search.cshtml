@@ -1,28 +1,42 @@
-@model List<Resource>;
+@model List<Resource>
+@using System.IO;
 
 @{
-    ViewData["Title"] = "Search Results";
+    ViewData["Title"] = "My Uploads";
 }
 
 <div class="text-center">
-    <h3 class="mb-3">Search Results for ""</h3>
-        <hr style="width: 50%; margin-left: 25%;">
+    <h3 class="mb-3">Search Results for "@ViewBag.searchItem"</h3>
+    <hr style="width: 50%; margin-left: 25%;">
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        @foreach (var resource in Model)
-        {
-        <div class="col" style="width: 250px;">
-            <div class="card">
-                <img src="~/images/pdf-file.png" class="card-img-top" alt="..." style="padding-top: 5px;">
-                <div class="card-body">
-                    <h5 class="card-title">@resource.Name</h5>
-                </div>
-                <div class="card-footer">
-                        <small class="text-body-secondary">@resource.Comments</small>
+
+    @if (Model.Count == 0)
+    {
+        <p>No Resource Found!</p>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var resource in Model)
+            {
+                <div class="col" style="width: 250px;">
+                    <div class="card">
+                        <img src="~/images/pdf-file.png" class="card-img-top" alt="..." style="padding-top: 5px;">
+                        <div class="card-body">
+                            <h5 class="card-title">@resource.Name</h5>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">@resource.Comments</small>
+                            <br />
+                            <!-- Link to the file using the relative path -->
+                            <a href="@Url.Content("~/UploadedFiles/" + resource.FilePath)" target="_blank" class="btn btn-primary">
+    View Resource
+</a>
+                        </div>
                     </div>
-            </div>
+                </div>
+            }
         </div>
-        }
-    </div>
+    }
 
 </div>

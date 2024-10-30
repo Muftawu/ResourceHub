@@ -5,16 +5,28 @@
       "PackagePath": "staticwebassets/group4.bundle.scp.css"
     },
     {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/UploadedFiles/Screenshot from 2024-10-09 09-29-33.png",
+      "PackagePath": "staticwebassets/UploadedFiles/Screenshot from 2024-10-09 09-29-33.png"
+    },
+    {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/UploadedFiles/basic.jpeg",
+      "PackagePath": "staticwebassets/UploadedFiles/basic.jpeg"
+    },
+    {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/UploadedFiles/microcontroller.jpeg",
+      "PackagePath": "staticwebassets/UploadedFiles/microcontroller.jpeg"
+    },
+    {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/UploadedFiles/portal.nss.gov.gh_appointmentletter.pdf",
+      "PackagePath": "staticwebassets/UploadedFiles/portal.nss.gov.gh_appointmentletter.pdf"
+    },
+    {
       "Id": "/home/muftawu/iteratives/group4/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/home/muftawu/iteratives/group4/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
-    },
-    {
-      "Id": "/home/muftawu/iteratives/group4/wwwroot/images/icons8-mind-map-48.png",
-      "PackagePath": "staticwebassets/images/icons8-mind-map-48.png"
     },
     {
       "Id": "/home/muftawu/iteratives/group4/wwwroot/images/mind-map.gif",
@@ -27,6 +39,14 @@
     {
       "Id": "/home/muftawu/iteratives/group4/wwwroot/images/pic.png",
       "PackagePath": "staticwebassets/images/pic.png"
+    },
+    {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/images/sign-up.gif",
+      "PackagePath": "staticwebassets/images/sign-up.gif"
+    },
+    {
+      "Id": "/home/muftawu/iteratives/group4/wwwroot/images/user-profile.gif",
+      "PackagePath": "staticwebassets/images/user-profile.gif"
     },
     {
       "Id": "/home/muftawu/iteratives/group4/wwwroot/js/site.js",

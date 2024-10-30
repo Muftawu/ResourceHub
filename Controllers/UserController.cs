@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using group4.Models;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace group4.Controllers;
 
@@ -81,24 +84,26 @@ public class UserController : Controller
         return View();
     }
 
+    [ValidateAntiForgeryToken]
     [HttpPost]
-    public async Task<IActionResult> Login(LoginViewModel user)
-    {   
+    public async Task<IActionResult> Login(LoginViewModel model)
+    {
         if (ModelState.IsValid)
         {
-            var result = await _signInManager.PasswordSignInAsync(user.Username, user.Password, isPersistent:false, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, isPersistent: false, lockoutOnFailure: false);
+
             if (result.Succeeded)
             {
-                TempData["SuccessMessage"] = $"Welcome back, {user.Username}";
+                TempData["SuccessMessages"] = "Login success.";
                 return RedirectToAction("MyUploads", "Resource");
             }
             else
             {
-                TempData["ErrorMessage"] = "Username or Password is incorrect";
+                TempData["ErrorMessages"] = "Unable to login";
+                ModelState.AddModelError("", "Username or Password incorrect.");
             }
-
         }
-        return View(user);
+        return View(model);
     }
 
 

@@ -14,7 +14,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-info border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">ResourceHub</a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/mind-map.gif" style="background-color: skyblue;" alt="">
+                </a>
 
                 @if (User.Identity != null && User.Identity.IsAuthenticated)
                 {
@@ -43,8 +45,11 @@
 
                 @if (User.Identity != null && User.Identity.IsAuthenticated)
                 {
-                    <form class="d-flex" role="search" style="padding-right: 30%;">
-                        <input class="form-control me-2" type="search" placeholder="Search resource..." aria-label="Search">
+                    <form asp-controller="Resource" asp-action="Search" class="d-flex" role="search"
+                        style="padding-right: 30%;" method="get">
+                        @Html.AntiForgeryToken()
+                        <input class="form-control me-2" type="search" placeholder="Search resource..." name="SearchItem"
+                            aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 }
@@ -66,7 +71,6 @@
                     }
                     else
                     {
-                        @* <button class="btn-outline-success btn-sm"> *@
                         <a asp-controller="User" asp-action="Login" class="nav-link" style="font-size:md;"
                             aria-expanded="false">
                             Login
@@ -75,7 +79,6 @@
                             aria-expanded="false">
                             SignUp
                         </a>
-                        @* </button> *@
                     }
                 </nav>
             </div>
@@ -94,18 +97,36 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Hello, @User?.Identity?.Name</p>
-                        @{
-                            var identity = User?.Identities.FirstOrDefault();
-                            if (identity != null)
-                            {
-                                var lastname = identity.FindFirst("LastName")?.Value; // Get the username
-                                var email = identity.FindFirst("Email")?.Value; // Get the email
-                                var firstName = identity.FindFirst("FirstName")?.Value; // Get the custom FirstName claim
-                                <p>Hello, @lastname</p>
+                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
 
-                            }
-                        }
+                            <div>
+                                <img src="~/images/user-profile.gif" class="rounded float-start" alt="...">
+                            </div>
+
+                            <div>
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">FirstName</th>
+                                            <th scope="col">LastName</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Phone</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">@User.FindFirst("Id")?.Value</th>
+                                            <th scope="row">@User.FindFirst("FirstName")?.Value</th>
+                                            <th scope="row">@User.FindFirst("LastName")?.Value</th>
+                                            <th scope="row">@User.FindFirst("Email")?.Value</th>
+                                            <th scope="row">@User.FindFirst("Phone")?.Value</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
